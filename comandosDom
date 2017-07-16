@@ -1,0 +1,53 @@
+-ejemplos-
+document.createElement('div')
+<div>​</div>​
+var div =doc
+var div =document.createElement("div");
+undefined
+div
+<div>​</div>​
+
+div.innerHTML = '<h2>Estoy aprenddd</h2>'
+"<h2>Estoy aprenddd</h2>"
+div
+<div>​<h2>​Estoy aprenddd​</h2>​</div>​
+div.setAttribute('class', 'aprendiendo')
+undefined
+div
+<div class=​"aprendiendo">​…​</div>​
+
+document.getElementById("quien-soy").appendChild(div)
+<div class=​"aprendiendo">​…​</div>​
+
+
+
+document.getElementById("quien-soy").appendChild(div)
+<div class=​"aprendiendo">​…​</div>​
+document.getElementById("quien-soy").removeChild(div)
+<div class=​"aprendiendo">​…​</div>​
+document.getElementById("quien-soy").replaceChild(div, document.getElementsByClassName("veronica-info")[0])
+<div class=​"veronica-info">​<h2>​Quien soy​</h2>​<strong>​veronica: ​</strong>​<span class=​"veronica-description">​…​</span>​</div>​
+
+
+var padre = document.getElementById("quien-soy")
+undefined
+padre.getElementsByClassName("aprendiendo")
+[div.aprendiendo]
+
+
+
+
+*************************
+document
+#document
+document.getElementById("quien-soy").style
+
+document.getElementById("quien-soy").style.color = 'red'
+"red"
+
+document.getElementById("quien-soy").style.backgroundColor = 'pink'
+"pink"
+
+for(item of document.querySelectorAll.('[id]')){console.log(item)}
+
+for(item of document.querySelectorAll('[id]')){console.log(item.getAttribute("id"))}  //cogemeos los ids de la página
