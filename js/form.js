@@ -8,6 +8,8 @@ var fechaInput = document.getElementById("fecha");
 var submitButton = document.getElementById("enviar");
 var inputTelefono = document.getElementById("telefono");
 
+var conocido_3 = document.getElementById("conocido_3");
+
 var conocidoInput = {
     conocido_1: document.getElementById("conocido_1"),
     conocido_1: document.getElementById("conocido_2"),
@@ -51,6 +53,7 @@ form.addEventListener("submit", function (event) {
         event.preventDefault();
         return false;
     }
+    
 
   
     submitButton.setAttribute("disabled", "");
@@ -63,4 +66,11 @@ form.addEventListener("submit", function (event) {
         submitButton.removeChild(loadingIcon);
         sendNotification("Formulario recibido", "Body de ejemplo");
     }, 1000);
+
+
+
+
+
+
+    
 });

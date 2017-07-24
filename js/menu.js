@@ -101,8 +101,5 @@ function changeMenuStyle(event) {
 var seccion = document.getElementById("quien-soy");
 var magicButton = document.getElementById("magicButton");
 
-sectionn.addEventListener("click", function(event){
-    console.log("seccion");
-    
-}true);
+sectionn.addEventListener("click", function(event){ console.log("seccion");} ,true);
 

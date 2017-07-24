@@ -77,3 +77,5 @@ input:disabled + div.number-spin-btn-container > div.number-spin-btn-up:before, 
 input:disabled + div.number-spin-btn-container > div.number-spin-btn-down:before, input:disabled + div.number-spin-btn-container > div.number-spin-btn-down:active:before {
   border-top-color: #999999;
   top: 75%;
+}
+

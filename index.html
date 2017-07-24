@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <link rel="stylesheet" type="text/css" href="./styles/style.css">
         <link rel="stylesheet" type="text/css" href="./styles/grid.css">
@@ -12,15 +13,17 @@
       <!-- scripts -->
 
         <script src="./js/jquery-3.2.1.js"></script>
-       <script src="./js/smooth-scroll.js"></script>
+        <script src="./js/smooth-scroll.js"></script>
         <script src='./js/number-polyfill.js'></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpiiZm0kg4wbYwPvUtNZvyLbiNcz6p8"></script>
-		  <script src='./js/googlemaps.js'></script>
+		<script src='./js/googlemaps.js'></script>
 
 
         <title>Cv Verónica Serna</title>
     </head>
     <body>
+      <div id="inicio" class="about-me clearfix section-container">  
+            </div>
         <header class="header">
             <h1 class="title">Currículum | Verónica Serna</h1>
             <!--<img class="title-img" src="./images/veronica.jpg" alt="Foto de veronica">-->
@@ -28,12 +31,12 @@
             <p class="title-cite">Frontend Developer estudiando para FullStack</p>
           
         </header>
-
+         
         <nav class="navbar">
             <ul class="navbar-list">
        
                 <li class="navbar-item ">
-                    <a href="#">Inicio</a>
+                    <a href="#inicio">Inicio</a>
                 </li>
                 <li class="navbar-item">
                     <a href="#quien-soy">Quien soy</a>
@@ -58,6 +61,8 @@
         </nav>
 
         <main class="container">
+          
+
             <section id="quien-soy" class="about-me clearfix section-container">
                 <div class="veronica-img">
                     <img  src="./images/veronica-serma.jpg" alt="Foto de Verónica Serna">
@@ -65,7 +70,7 @@
                 <div class="veronica-info">
                     <h2>Quien soy</h2>
                     <strong>Verónica Serna: </strong>
-                    <span class="veronica-description">Frontend Developer | Diseñadora | y Bloggera www.cookyourweb.com</span>
+                    <span class="veronica-description">Frontend Developer | Diseñadora | y Bloggera <a href="http://www.cookyourweb.com" target="_blanck">Cookyourweb.com</a></span>
                 </div>
                 
                 
@@ -265,6 +270,14 @@
                     </div>
                     <div class="col-6">
                     <div class="form">
+
+
+
+
+
+
+
+                        
                             <form name="contacto" method="get" novalidate>
                                 <div class="form-row">
                                     <label for="nombre">Nombre:</label>
@@ -290,6 +303,12 @@
 
 
                                 <div class="form-row">
+
+
+
+
+
+                                    
                                     <div>¿Cómo me has conocido?</div>
                                     <label for="conocido_1">Blog</label>
                                     <input type="radio" id="conocido_1" name="conocido" value="Blog" >
@@ -300,6 +319,12 @@
                                     <label for="conocido_3">Otros</label>
                                     <input type="radio" id="conocido_3" name="conocido" value="Otros" >
                                 </div>
+
+
+
+
+
+<p id="demo"></p>
 
                                 <div style="visibility: hidden;" id="muestraOpConcocido" class="form-row">
                                     <label for="opConocido">Por favor, indica cómo me has conocido:</label>
@@ -333,5 +358,13 @@
       <script src="./js/notifications.js"></script>
     <script src="./js/form.js"></script>
     <script src="./js/ajax.js"></script>
+<script>
+document.getElementById("conocido_3").addEventListener("click", funcionComoNosHasConocido);
+
+function funcionComoNosHasConocido() {
+   
+   document.getElementById("muestraOpConcocido").style.visibility = "visible";
+}
+</script>
 
 </html>
