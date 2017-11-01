@@ -1,92 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+        <title>Cv Verónica Serna</title>
         <link rel="stylesheet" type="text/css" href="./styles/style.css">
-        <link rel="stylesheet" type="text/css" href="./styles/grid.css">
-       <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
-       <link rel="stylesheet" href="./styles/font-awesome.css"> 
-
-
-      <!-- scripts -->
-
-        <script src="./js/jquery-3.2.1.js"></script>
-        <script src="./js/smooth-scroll.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/font-awesome.css"> 
+        <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="./js/scroll.js"></script>
+        <script type="text/javascript" src="./js/ajax.js"></script>
+        <script type="text/javascript" src="./js/form.js"></script>
         <script src='./js/number-polyfill.js'></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpiiZm0kg4wbYwPvUtNZvyLbiNcz6p8"></script>
 		<script src='./js/googlemaps.js'></script>
-
-
-        <title>Cv Verónica Serna</title>
     </head>
+   
     <body>
-      <div id="inicio" class="about-me clearfix section-container">  
+      <!-- <div id="inicio" class="about-me clearfix section-container">  
             </div>
         <header class="header">
             <h1 class="title">Currículum | Verónica Serna</h1>
-            <!--<img class="title-img" src="./images/veronica.jpg" alt="Foto de veronica">-->
-            <div id="title-img-animated" class="title-img"></div>
+       
             <p class="title-cite">Frontend Developer estudiando para FullStack</p>
           
-        </header>
+        </header> -->
          
         <nav class="navbar">
             <ul class="navbar-list">
-       
-                <li class="navbar-item ">
-                    <a href="#inicio">Inicio</a>
+                <li class="navbar-item active">
+                    <a href="#" class="navbar-link">Inicio</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#quien-soy">Quien soy</a>
+                    <a href="#quien-soy" class="navbar-link">Quien soy</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#estudios">Estudios</a>
+                    <a href="#estudios" class="navbar-link">Estudios</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#experiencia">Experiencia</a>
-                </li>
-                 <li class="navbar-item">
-                    <a href="#sobre-mi">Sobre mi</a>
+                    <a href="#experiencia" class="navbar-link">Experiencia</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#contacto">Contacto</a>
+                    <a href="#contacto" class="navbar-link">Contacto</a>
                 </li>
-               <li class="navbar-item">
-                    <a href="tasks.html">Tareas</a>
+                <li class="navbar-item">
+                    <a href="tasks.html" class="navbar-link">Tareas</a>
                 </li>
-                
             </ul>
         </nav>
 
+        <header>
+            <div id="headerImg"> <h1 class="title">Currículum | Verónica Serna</h1>
+                
+                     <p class="title-cite">Frontend Developer estudiando para FullStack</p></div>
+        </header>
         <main class="container">
           
-
-            <section id="quien-soy" class="about-me clearfix section-container">
+            <section id="quien-soy" class="row-flex section-container-reverse">
+                <div class="flex-item profile-photo">
+                    <div id="profilePhoto"></div>
+                </div>
+            <!-- <section id="quien-soy" class="about-me clearfix section-container">
                 <div class="veronica-img">
                     <img  src="./images/veronica-serma.jpg" alt="Foto de Verónica Serna">
-                </div>
-                <div class="veronica-info">
+                </div> -->
+                <div class="flex-item">
                     <h2>Quien soy</h2>
+                    
                     <strong>Verónica Serna: </strong>
                     <span class="veronica-description">Frontend Developer | Diseñadora | y Bloggera <a href="http://www.cookyourweb.com" target="_blanck">Cookyourweb.com</a></span>
-                </div>
-                
-                
-                
-                
-                
+                </div>  
             </section>
             
 
-            <section id="estudios" class="estudios section-reverse section-container">
-                <div class="row container">
-                   <div class="col-12">
+                <section id="estudios" class="row-flex section-container">
+                   <div class="flex-item">
                         <h2>Estudios</h2>
-                   </div>
-                   
-                    <div class="col-6">
+                 
                         <article class="estudios-member">
                             <header>
                                 <h3>
@@ -129,12 +118,11 @@
                              <td>Uned <span class="fecha">1995</span></td>
                         </tr>
                         
-
                     </tbody>
                 </table>
                         </article>
                     </div>
-                    <div class="col-6">
+                    <div class="flex-item" background-color:pink;>
                         <article class="estudios-skills">
                             <header>
                                 <h3>
@@ -172,13 +160,12 @@
             
                     </div>
             </section>
-            <section id="experiencia" class="experiencia section-container">
-                            <div class="row container">
-                            <div class="col-12">
-                               
-						<h2 >
-							<i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp;Experiencia Profesional
-						</h2>
+             <section id="experiencia" class="row-flex section-container-reverse">
+             <div class="flex-item profile-photo">
+                  
+						<h2><i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp;Experiencia Profesional
+                        </h2>
+                        
 						<div class="exp-sectionContent">
 							<div class="inner">
 								<article>
@@ -218,17 +205,15 @@
                                      <p> Trabajando para varias empresas en el diseño web de sus empresas</p>
 									</div>
 								</article>
-
+                            </div>
 
                                 
 							</div>
 						</div>
-					
-                                </div>
+	 </section>
                     
-                            </div>
-                            
-                        </section>
+                         
+                      
             <section id="sobre-mi" class="experiencia section-reverse-bg">
                
                <div class="row container">

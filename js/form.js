@@ -1,76 +1,85 @@
-var form =  document.getElementsByTagName('form')[0];
+$( document ).ready(function() {
+	var form = $('#formContact');
 
-var inputNombre = document.getElementById("nombre");
-var inputApellidos = document.getElementById("apellidos");
-var emailInput = document.getElementById("email");
-var opConocidoInput = document.getElementById("opConocido");
-var fechaInput = document.getElementById("fecha");
-var submitButton = document.getElementById("enviar");
-var inputTelefono = document.getElementById("telefono");
+	var inputNombre = $("#nombre")[0];
+	var inputPhone = $('#phone')[0];
+	var inputEmail = $('#email')[0];
+	var inputConocido = $('#conocido');
+	var comentariosTextarea = $('#comentarios');
 
-var conocido_3 = document.getElementById("conocido_3");
+	var inputOtros = document.createElement("input");
+	inputOtros.setAttribute("id", "conocido_otro");
+	inputOtros.setAttribute("type", "text");
+	inputOtros.setAttribute("name", "conocido_otro");
+	inputOtros.setAttribute("placeholder", "Otro...");
+	inputOtros.setAttribute("required", "");
 
-var conocidoInput = {
-    conocido_1: document.getElementById("conocido_1"),
-    conocido_1: document.getElementById("conocido_2"),
-    conocido_1: document.getElementById("conocido_3")
-};
+	inputConocido.change(function(event) {
+		if ($( "select option:selected" ).val() == 'otro') {
+			inputConocido.after( inputOtros);
+		} else {
+			if($('#conocido_otro').length) {
+				$('#conocido_otro').remove();
+			}
+		}
+	})
 
-var loadingIcon = document.createElement('i');
-loadingIcon.classList.add("fa", "fa-spinner", "fa-spin");
+	form.submit(function(event) {
+		if($('#conocido_otro').length && $('#conocido_otro')[0].checkValidity() == false) {
+			alert("Escribe como me has conocido");
+			$('#conocido_otro')[0].focus();
+			event.preventDefault();
+			return false;
+		}
 
-form.addEventListener("submit", function (event) {
-    if (inputNombre.checkValidity() === false) {
-        alert("Escribe tu nombre");
-        inputNombre.focus();
-        event.preventDefault();
-        return false;
-    }
+		if(inputNombre.checkValidity() == false) {
+			alert("Escribe tu nombre");
+			inputNombre.focus();
+			event.preventDefault();
+			return false;
+		}
 
-    if (inputApellidos.checkValidity() === false) {
-        alert("Escribe tus apellidos");
-        inputApellidos.focus();
-        event.preventDefault();
-        return false;
-    }
+		if(email.checkValidity() == false) {
+			alert("Escribe tus email correcto");
+			email.focus();
+			event.preventDefault();
+			return false;
+		}
 
-    if (emailInput.checkValidity() === false) {
-        alert("Introduce un email correcto");
-        emailInput.focus();
-        event.preventDefault();
-        return false;
-    }
-    
-    if (inputTelefono.checkValidity() === false) {
-        alert("Introduce un telefono correcto");
-        inputTelefono.focus();
-        event.preventDefault();
-        return false;
-    }
+		if(phone.checkValidity() == false) {
+			alert("Escribe tu telefono");
+			phone.focus();
+			event.preventDefault();
+			return false;
+		}
 
-    if (conocidoInput.conocido_1.checkValidity() === false) {
-        alert("Introduce como nos has conocido");
-        event.preventDefault();
-        return false;
-    }
-    
+		if (countWords(comentariosTextarea.val()) > 150) {
+			alert("Solo puedes introducir 150 palabras.")
+			comentariosTextarea.focus();
+			event.preventDefault();
+			return false;
+		}
 
-  
-    submitButton.setAttribute("disabled", "");
-    submitButton.appendChild(loadingIcon);
-    event.preventDefault();
+		sendForm({
+			'name': inputNombre.value,
+			'phone': inputPhone.value,
+			'email': inputEmail.value,
+			'conocido': inputConocido.val(),
+			'comentarios': comentariosTextarea.val()
+		});
+		event.preventDefault();
+		return false;
 
-    setTimeout(function () {
-        form.reset();
-        submitButton.removeAttribute("disabled");
-        submitButton.removeChild(loadingIcon);
-        sendNotification("Formulario recibido", "Body de ejemplo");
-    }, 1000);
+	});
 
+	function countWords (phrase) {
+		var phraseReplaceSpaces = phrase.replace(/\s\s+/g, ' ').trim();
+		var arrayOfWords = phraseReplaceSpaces.split(' ');
+		var numberOfWords = arrayOfWords.length;
+		return numberOfWords;
+	}
 
-
-
-
+});
 
     
 });
