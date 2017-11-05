@@ -1,4 +1,4 @@
-var image = document.getElementById("title-img-animated");
+var image = document.getElementById("title-cite");
 
 /*image.addEventListener('mousemove', function (event) {
     image.style.backgroundPosition = event.pageX * -1/12 + "px " + event.pageY * -1/12 + "px";

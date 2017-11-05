@@ -10,22 +10,13 @@
         <script type="text/javascript" src="./js/scroll.js"></script>
         <script type="text/javascript" src="./js/ajax.js"></script>
         <script type="text/javascript" src="./js/form.js"></script>
+        <script type="text/javascript" src="./js/animation.js"></script>
         <script src='./js/number-polyfill.js'></script>
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpiiZm0kg4wbYwPvUtNZvyLbiNcz6p8"></script>
-		<script src='./js/googlemaps.js'></script>
+        
     </head>
    
     <body>
-      <!-- <div id="inicio" class="about-me clearfix section-container">  
-            </div>
-        <header class="header">
-            <h1 class="title">Currículum | Verónica Serna</h1>
-       
-            <p class="title-cite">Frontend Developer estudiando para FullStack</p>
-          
-        </header> -->
-         
-        <nav class="navbar">
+      <nav class="navbar">
             <ul class="navbar-list">
                 <li class="navbar-item active">
                     <a href="#" class="navbar-link">Inicio</a>
@@ -39,6 +30,9 @@
                 <li class="navbar-item">
                     <a href="#experiencia" class="navbar-link">Experiencia</a>
                 </li>
+                <li class="navbar-item">
+                        <a href="#sobre-mi" class="navbar-link">Sobre mi</a>
+                    </li>
                 <li class="navbar-item">
                     <a href="#contacto" class="navbar-link">Contacto</a>
                 </li>
@@ -59,10 +53,7 @@
                 <div class="flex-item profile-photo">
                     <div id="profilePhoto"></div>
                 </div>
-            <!-- <section id="quien-soy" class="about-me clearfix section-container">
-                <div class="veronica-img">
-                    <img  src="./images/veronica-serma.jpg" alt="Foto de Verónica Serna">
-                </div> -->
+         
                 <div class="flex-item">
                     <h2>Quien soy</h2>
                     
@@ -70,10 +61,9 @@
                     <span class="veronica-description">Frontend Developer | Diseñadora | y Bloggera <a href="http://www.cookyourweb.com" target="_blanck">Cookyourweb.com</a></span>
                 </div>  
             </section>
-            
-
-                <section id="estudios" class="row-flex section-container">
-                   <div class="flex-item">
+    
+                <section id="estudios" class="row-flex section-container">  
+                    <div class="flex-item">
                         <h2>Estudios</h2>
                  
                         <article class="estudios-member">
@@ -122,11 +112,13 @@
                 </table>
                         </article>
                     </div>
-                    <div class="flex-item" background-color:pink;>
-                        <article class="estudios-skills">
+                  
+                    <div class="flex-item">
+                        <h2>Habilidades</h2>
+                        <article class="estudios-skills"> 
                             <header>
                                 <h3>
-                                    Habilidades
+                                    Front-end
                                     
                                 </h3>
                                 
@@ -160,14 +152,12 @@
             
                     </div>
             </section>
-             <section id="experiencia" class="row-flex section-container-reverse">
-             <div class="flex-item profile-photo">
-                  
-						<h2><i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp;Experiencia Profesional
-                        </h2>
-                        
-						<div class="exp-sectionContent">
+             <section id="experiencia" class="row-flex section-container-reverse-est ">
+             <div class="flex-item col-flex-experiencia"> 
+                    <div class="exp-sectionContent">
 							<div class="inner">
+                                	<h2><i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp;Experiencia Profesional
+                                    </h2>
 								<article>
 									<h3 class="exp-articleTitle">Front-end Developer</h3>
 									<div class="exp-articleMeta">
@@ -186,8 +176,6 @@
 									</div>
 									<div class="exp-articleContent">
                                           <ul><li>	Desempeñando labores de diseño y desarrollo Web.</li>
-
-
                                         Diseño de campañas de marketing (banners, landing pages)</li><li>
                                         Elaboración de newsletters.</li><li>
                                         Diseño de material offline (carteles, rollups, fotocall, tarjetas, diseño de stands)</li><li>
@@ -206,128 +194,101 @@
 									</div>
 								</article>
                             </div>
-
-                                
-							</div>
+	
 						</div>
-	 </section>
-                    
-                         
-                      
-            <section id="sobre-mi" class="experiencia section-reverse-bg">
-               
-               <div class="row container">
-                                <div class="col-12">
-                                        <h2>Sobre mi</h2>
-                                </div>
-                                
-                                    <div class="col-6">
-                                        <div class="veronica-video">
-                                    <video id="video" width="550" height="300" controls>
-                                        <source src="./video/woman-laptop.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="veronica-info">
-                                    <h2>Mis aficiones</h2>
-                                    
-                                    <p class="veronica-description">Soy una persona que me gusta el deporte (últimamente me ha dado por el Yoga y la bicicleta), pero en general todo aquel deporte o afición que se pueda practicar al aire libre.</p>
-                                    <p>Madre de familia númerosa y apasionada de la moto , si puedo hago rutas los fines de semana.</p>
-                                    <p>Intelectualmente, me gusta mucho leer, y ahí es donde <u>no consigo tiempo libre para ello</u>, y la musica de todo tipo como por ejemplo esta selección de  <a  class ="youtube" href="https://www.youtube.com/playlist?list=PLZjgJ9tOUd-TEEQvpv2l6IHOAyjYIVxzT" target="_blank">Youtube</a></p>
-                                </div>
-                                    </div>
                         
+             </div>
+            
+					
+	         </section>
+      <section id="sobre-mi" class="row-flex section-container ">
+            <div class="flex-item">
+                    <h2>Sobre mi</h2>
+                   
+                        <header>
+                            <h3>
+                              Mis aficiones
+                                
+                            </h3>
+                            
+                        </header>
+                   
+               <article><p class="veronica-description">Soy una persona que me gusta el deporte (últimamente me ha dado por el Yoga y la bicicleta), pero en general todo aquel deporte o afición que se pueda practicar al aire libre.</p>
+                <p>Madre de familia númerosa y apasionada de la moto , si puedo hago rutas los fines de semana.</p>
+                <p>Intelectualmente, me gusta mucho leer, y ahí es donde <u>no consigo tiempo libre para ello</u>, y la musica de todo tipo como por ejemplo esta selección de  <a  class ="youtube" href="https://www.youtube.com/playlist?list=PLZjgJ9tOUd-TEEQvpv2l6IHOAyjYIVxzT" target="_blank">Youtube</a></p>
+            </article>
+                                         
+                                        </div>
 
-             </section>
+
+ <div class="flex-item">
+                    <h2>Video</h2>
+                   
+                        <header>
+                            <h3>
+                              Mi trabajo
+                                
+                            </h3>
+                            
+                        </header>
+                   
+                        <video id="video" width="550" height="300" controls>
+                                <source src="./video/woman-laptop.mp4" type="video/mp4">
+                            </video>
+                                         
+                                        </div></section>
 
           
-        </main>
-
-            <section id="contacto" class="experiencia section-container">
-                   <div class="row container">
-                   <div class="col-12">
-                        <h2>Contacto</h2>
-                   </div>
-                   
-                    <div class="col-6">
-                      <div id="googleMap"></div>
-                    </div>
-                    <div class="col-6">
-                    <div class="form">
-
-
-
-
-
-
-
-                        
-                            <form name="contacto" method="get" novalidate>
+            <section id="contacto" class="row-flex section-container-reverse-est ">
+                    <div class="flex-item">
+                      
+                        <form id="formContact" class="form row-flex" novalidate>
+                                <h2>Contacto</h2>
+                            <div class="form-items">
+                                <div>
+                                    <div class="form-row">
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                                    </div>	
+        
+                                    <div class="form-row">
+                                        <label>¿Como me has conocido?</label>
+        
+                                        <select id="conocido" name="conocido" style="background-color: white;" required> 
+                                            <option value="linkedin">Linkedin</option>
+                                            <option value="github">Github</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+        
+                                <div>
+                                    <div class="form-row">
+                                        <label for="emial">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="name@company.com" 
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required>
+                                    </div>
+        
+                                    <div class="form-row">
+                                        <label for="ejercito">Telefono</label>
+                                        <input type="number" id="phone" name="phone" placeholder="+3400000000" required>
+                                    </div>
+                                </div>
+        
                                 <div class="form-row">
-                                    <label for="nombre">Nombre:</label>
-                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-
-                                    <label for="apellidos">Apellidos:</label>
-                                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                                    <label>Comentarios</label>
+                                    <textarea id="comentarios"></textarea>
                                 </div>
-
-                                <div class="form-row">
-                                    <label for="email">Email:</label>
-                                    <input type="email" id="email" name="email" placeholder="name@company.com"
-                                    pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
-                                </div>
-                                <div class="form-row">
-                                <label for="telefono">Teléfono:</label>
-		                        
-			                    <input id="telefono" name="telefono" type="tel" pattern="[0-9]*"  placeholder="Su telefono de contacto" required >
-	
-
-                                </div>
-
-
-
-                                <div class="form-row">
-
-
-
-
-
-                                    
-                                    <div>¿Cómo me has conocido?</div>
-                                    <label for="conocido_1">Blog</label>
-                                    <input type="radio" id="conocido_1" name="conocido" value="Blog" >
-
-                                    <label for="conocido_2">LInkedin</label>
-                                    <input type="radio" id="conocido_2" name="conocido" value="Linkedin" >
-
-                                    <label for="conocido_3">Otros</label>
-                                    <input type="radio" id="conocido_3" name="conocido" value="Otros" >
-                                </div>
-
-
-
-
-
-<p id="demo"></p>
-
-                                <div style="visibility: hidden;" id="muestraOpConcocido" class="form-row">
-                                    <label for="opConocido">Por favor, indica cómo me has conocido:</label>
-                                    <input type="text" id="opConocido" name="opConocido">
-                                </div>
-
-                                
-
+                            </div>
+        
+                            <div>
                                 <div class="form-row">
                                     <button type="submit" id="enviar">Enviar</button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-         
-                </div>
-                
-            </section>
+                </section>
       
         </main>
 
@@ -335,21 +296,5 @@
             Verónia Serna &copy; 2017
         </footer>
     </body>
-  
-    <script src="./js/menu.js"></script>
-
-    <script src="./js/animation.js"></script>
-    <script src="./js/full-screen.js"></script>
-      <script src="./js/notifications.js"></script>
-    <script src="./js/form.js"></script>
-    <script src="./js/ajax.js"></script>
-<script>
-document.getElementById("conocido_3").addEventListener("click", funcionComoNosHasConocido);
-
-function funcionComoNosHasConocido() {
-   
-   document.getElementById("muestraOpConcocido").style.visibility = "visible";
-}
-</script>
 
 </html>

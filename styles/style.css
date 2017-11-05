@@ -5,6 +5,10 @@
 html {
 	height: 100%;
 }
+@font-face {
+	font-family: veronica;
+	src: url(../fonts/Kalam-Bold.ttf);
+}
 
 body {
 	margin: 0px;
@@ -23,9 +27,25 @@ body {
 	padding-bottom: 50px;
 	min-height: 400px;
 }
+.section-container-reverse-est {
+
+	background-color: #2980B9;
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+	min-height: 400px;
+
+}
+.col-flex-experiencia{
+	display: flex;
+    justify-content: center;
+  
+}
 
 .section-container-reverse {
-	background-color: rgba(10, 128, 8, 0.5);
+	background-color: #2980B9;
 	color: white;
 	margin-left: calc(-50vw + 50%);
 	margin-right: calc(-50vw + 50%);
@@ -48,7 +68,7 @@ body {
 	z-index: 10;
 	width: 100%;
 	background-color: white;
-	box-shadow: rgba(10, 128, 8, 0.5) 0px 2px 20px 0px;
+	box-shadow: #2980B9 0px 2px 20px 0px;
 	position: fixed;
 	top: 0;
 	animation: flipIn 1s forwards;
@@ -78,12 +98,12 @@ body {
 
 .navbar > .navbar-list > .navbar-item.active > .navbar-link {
 	color: #F7F7F7;
-	background-color: rgba(10, 128, 8, 0.53);
+	background-color: #2980B9;
 }
 
 .navbar > .navbar-list > .navbar-item > .navbar-link:hover {
 	color: #F7F7F7;
-	background-color: rgba(10, 128, 8, 0.53);
+	background-color: #2980B9;
 }
 
 #headerImg {
@@ -112,6 +132,20 @@ body {
 	align-items: center;
 }
 
+
+.title-cite {
+   position: absolute;
+	right: 0;
+	top: 80%;
+	width: 80%;
+	text-align: center;
+	font-size: 28px;
+	color: #2980B9;
+	font-family: veronica;
+	/*opacity: 0;
+	animation: subtitleAnimation 1s forwards;
+	animation-delay: 1s;*/
+}
 .tecnologias-photos {
 	display: flex;
 	flex-flow: row nowrap;
@@ -122,7 +156,7 @@ body {
 .tencologias-photo {
 	width: 120px;
 	height: 120px;
-	background-color: rgba(10, 128, 8, 0.5);
+	background-color: rgba(64, 75, 109, 0.5);
 	border-radius: 50%;
 	margin: 10px;
 }
@@ -217,7 +251,7 @@ th, td {
 }
 
 tr:nth-child(odd) {
-	background-color: rgb(180, 210, 179);
+	background-color: #2980B9;
 }
 
 tr:nth-child(even) {
@@ -251,7 +285,7 @@ input, select, textarea {
 }
 
 input[type=button], input[type=submit], input[type=reset], button {
-	background-color: #4CAF50;
+	background-color:#0bb613;
 	border: none;
 	color: white;
 	padding: 15px 40px;
@@ -271,26 +305,10 @@ textarea {
 	padding: 5px;
 	resize: none;
 }
-.skills-container {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.skills {
-    text-align: right; /* Right-align text */
-    padding-right: 20px; /* Add some right padding */
-    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
-    color: white; /* White text color */
-}
-.skill-type{
-display: inline;
-float: left;
- padding-left: 20px; /* Add some right padding */
-line-height: 40px; 
 
-}
 .footer {
 	width: 100%;
-	background-color: rgba(10, 128, 8, 0.5);
+	background-color: rgba(57, 58, 57, 0.062);
 	height: 50px;
 	color: #F7F7F7;
 	display: flex;
@@ -298,6 +316,34 @@ line-height: 40px;
 	align-items: center;
 	justify-content: center;
 }
+.skills-container {
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+
+}
+.skills {
+	text-align: right; /* Right-align text */
+	padding-right: 20px; /* Add some right padding */
+	line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+	color: white; /* White text color */
+}
+
+.skill-type{
+	display: inline;
+	float: left;
+	 padding-left: 20px; /* Add some right padding */
+	line-height: 40px; 
+	
+	}
+
+
+ .es
+	.html {width: 90%; background-color: #4CAF50;} /* Green */
+	.css {width: 80%; background-color: #2196F3;} /* Blue */
+	.js {width: 65%; background-color: #f44336;} /* Red */
+	.php {width: 60%; background-color: #808080;} /* Dark Grey */
+	
 
 @keyframes flipIn {
   0%   { transform: rotateX(90deg); }
