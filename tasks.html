@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Cv Verónica Serna</title>
+        <title>Task example Ajax</title>
         <link rel="stylesheet" type="text/css" href="./styles/style.css">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
         <link rel="stylesheet" href="./styles/font-awesome.css"> 
-        <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
         <script type="text/javascript" src="./js/scroll.js"></script>
         <script type="text/javascript" src="./js/ajax.js"></script>
         <script type="text/javascript" src="./js/form.js"></script>
@@ -19,49 +19,50 @@
     <body>
             <nav class="navbar">
                     <ul class="navbar-list">
-                        <li class="navbar-item active">
-                            <a href="/index.html" class="navbar-link">Inicio</a>
+                            <li class="navbar-item">
+                            <a href="index.html" class="navbar-link">Inicio</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="/index.html#quien-soy" class="navbar-link">Quien soy</a>
+
+
+                            <a href="index.html#quien-soy" class="navbar-link">Quien soy</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="/index.html#estudios" class="navbar-link">Estudios</a>
+                            <a href="index.html#estudios" class="navbar-link">Estudios</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="/index.html#experiencia" class="navbar-link">Experiencia</a>
+                            <a href="index.html#experiencia" class="navbar-link">Experiencia</a>
                         </li>
                         <li class="navbar-item">
-                                <a href="/index.html#sobre-mi" class="navbar-link">Sobre mi</a>
+                                <a href="index.html#sobre-mi" class="navbar-link">Sobre mi</a>
                             </li>
                         <li class="navbar-item">
-                            <a href="/index.html#contacto" class="navbar-link">Contacto</a>
+                            <a href="index.html#contacto" class="navbar-link">Contacto</a>
                         </li>
-                        <li class="navbar-item">
-                            <a href="tasks.html" class="navbar-link active">Tareas</a>
+                        <li class="navbar-item active">
+                            <a href="tasks.html" class="navbar-link">Tareas</a>
                         </li>
                     </ul>
                 </nav>
 
-                <header style="margin-top: 20px;">
+                <header >
                         <h1 class="title">Tareas | Verónica Serna</h1>
                             
               </header>
                     <main class="container">
                         <div class="row-flex section-container">  
-                            <div class="flex-item">	<h2>Tareas</h2>
+                            <div class="flex-item">	
                                 
                                    
-                                <h3>Añadir nueva tarea</h3>
+                                <h3> <span style="font-size:1.5em;color:green; margin-right:20px;"><i class="fa fa-tasks"></i></span>Tus tareas  </h3>
                                 <form>
                                     <input type="text" id="newTaskName" name="name" placeholder="Nueva tarea..." required>
-                                    <br>
-                                    <br>
-                                    <button id="sendNewTask">Enviar</button>
+                                    
+                                   <button id="sendNewTask"></i>Añadir nueva tarea</button>
                                 </form>
                             
                             </div>
-                            <div class="flex-item"><h3>Tareas pendientes</h3>
+                            <div class="flex-item"><h3> <span style="font-size:1.5em;color:red; margin-right:20px;"><i class="fa fa-bell"></i></span>Tareas pendientes</h3>
                                 <div class="loader"></div>
                                 <div>
                                     <ul id="taskContainer">
@@ -70,7 +71,7 @@
                              </main>
 
         <footer class="footer">
-            Verónia Serna &copy; 2017
+            Verónia Serna (Keepcoding Alumny) &copy; 2017-2018 
         </footer>
 
         <script src="js/ajaxTask.js"></script> 
